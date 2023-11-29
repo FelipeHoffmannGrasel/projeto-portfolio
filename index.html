@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Experiences</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a onclick="openCNTnav()">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="main">
+        <section id="about" class="sections">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>
+                        My name is Felipe Hoffmann Grasel, I'm 18 years old and I was born in São Leopoldo.
+                        I am a calm person who always prioritizes thinking before acting and I like to
+                        being myself with my friends, I would say I'm smarter than most
+                        but maybe that's my ego talking. As the famous CR7 said,
+                        "I may not be the best, but for me, in my head I am the best".
+                        I always intend to strive for the top, reach my goals and be the best I can be.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <hr>
+
+        <section id="education" class="sections">
+            <div class="education-container">
+                <h2>Education - Experience</h2>
+
+                <ol>
+                    <li>Elementary School: 
+                        <br>EMEF. Olímpio Vianna Albrecht</li><br>
+                    <hr>
+                    <li>Course- Complete IT 348h: 
+                        <br>Pop Escolas</li><br>
+                    <hr>
+                    <li>High School: 
+                        <br>EEEM. Caic Madezzati</li><br>
+                    <hr>
+                    <li>Course- Plastic Injection and Extruder Machine Preparation:
+                        <br>SENAI Institute of Innovation in Polymer Engineering
+                    </li><br>
+                    <hr>
+                    <li>Course- Programming logic 60h: 
+                        <br>Unisinos São Leopoldo</li><br>
+                    <hr>
+                    <li>Course- SENAC Systems Development Technician 1200h (Studying): 
+                        <br>Senac - Unisinos São Leopoldo</li><br>
+                </ol>
+            </div>
+        </section>
+        
+        <hr>
+
+        <section id="projects" class="sections">
+            <h2>Projects</h2>
+                <button id="projects_btn1" onclick="openUDFNav()">Undefined</button>
+                <button id="projects_btn2" onclick="openPINav()">P.I. Project SENAC</button>
+                <button id="projects_btn3" onclick="openUDFNav()">Undefined</button>
+        </section>
+        
+        <hr>
+
+        <section id="skills" class="sections">
+            <div class="skills-container">
+                <h2>Skills</h2>
+
+                <button class="accordion">Easy Learning</button>
+                <div class="panel">
+                    <p>Just like a good percentage of students,
+                        I find it easy to learn most things
+                        allowing me to go deeper in less time</p>
+                </div>
+
+                <button class="accordion">Working under pressure</button>
+                <div class="panel">
+                    <p>As I have been working in the area for some time,
+                        I've had some experiences where I've had
+                        acting under pressure and I got used to it,
+                        These days it's a rare situation where I get nervous.</p>
+                </div>
+
+                <button class="accordion">Technical knowledge</button>
+                <div class="panel">
+                    <p>Just before starting the course, I started
+                        working, which gave me more time to train
+                        and made me acquire more little knowledge
+                        time.</p>
+                </div>
+
+                <button class="accordion">Ease of communication</button>
+                <div class="panel">
+                    <p>Teamwork was one of the things I improved at
+                        a lot in the last year, which allowed me to
+                        communicate better with team members.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section>
+        <div id="PIsidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closePINav()">&times;</a>
+            <h2>P.I. Project</h2>
+
+            <img src="img/P.I. Project.png" alt="Projeto_PI">  
+
+            <hr>
+            <br><h2>Description</h2><br>
+            <p class="project_desc">
+                The P.I. Project (Integrator Project) is work that we are doing
+                from the beginning of the course with the aim of being a final work.
+                The project seeks to simulate an online "supermarket" where people
+                (both supermarket managers and consumers)
+                can register and add products for promotion wherever they are,
+                helping to sell more products in participating supermarkets and
+                savings for those who are always looking for the best price
+            </p><br>
+
+            <hr>
+            <br><h2>Technologies used:</h2><br>
+            <div id="tec_list">
+                <ol>
+                    <li>Figma:
+                        <br>Basic layout</li><br>
+                    <hr>
+                    <li>NetBeans: 
+                        <br>application BackEnd.</li><br>
+                    <hr>
+                    <li>Javascript:
+                        <br>site BackEnd.</li><br>
+                    <hr>
+                    <li>HTML/CSS: 
+                        <br>FrontEnd and website styling.</li><br>
+                    <hr>
+                    <li>MySQL: 
+                        <br>Database for the website.</li><br>
+                </ol>
+            </div>
+        </div>
+        
+        <div id="undefined_sidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeUDFNav()">&times;</a>
+            <h2>Project not yet defined.</h2>
+        </div>
+
+        <div id="cnt_sidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeCNTnav()">&times;</a>
+            <h2>Talk to me!</h2>  
+
+            <form action="#">
+                <input type="text" name="nome" id="nome" placeholder="Nome:"><br>
+                <input type="text" name="email" id="email" placeholder="Email:"><br>
+                <textarea id="comentario" placeholder="Comentário:"></textarea><br>
+                <input type="submit" name="Enviar" id="enviar">
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/felipe-hoffmann-a09836248/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/FelipeHoffmannGrasel" target="_blank">GitHub</a>
+            <a href="mailto: felipegrasel2@gmail.com"  target="_blank">Email</a>
+        </div>
+    </footer>
+
+    <script>
+        function openPINav() {
+            document.getElementById("PIsidenav").style.width = "100%";
+        }
+        
+        function closePINav() {
+            document.getElementById("PIsidenav").style.width = "0";
+        }
+
+        function openUDFNav() {
+            document.getElementById("undefined_sidenav").style.width = "100%";
+        }
+        
+        function closeUDFNav() {
+            document.getElementById("undefined_sidenav").style.width = "0";
+        }
+
+        function openCNTnav() {
+            document.getElementById("cnt_sidenav").style.width = "33%";
+            document.getElementById("main").style.marginLeft = "25%";
+        }
+
+
+        function closeCNTnav() {
+            document.getElementById("cnt_sidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+        }
+    </script>
+</body>
+</html>
